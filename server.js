@@ -8,7 +8,7 @@ const cors=require("cors")
 
 try {
   //console.log(process.env.MONGOURI)
-  mongoose.connect("mongodb+srv://Nasir:gq4ib3Z0K8BAdCGR@cluster0.tq6a7.mongodb.net/?retryWrites=true&w=majority", {
+  mongoose.connect(process.env.MONGOURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }).then(()=>{
